@@ -1,0 +1,21 @@
+---
+title: "Get ready to cut some shapes!"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{awesome_shape_cutting}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(cuttingshapes)
+```
+
+Anna to put so many awesome examples of cutting shapes here!!!
