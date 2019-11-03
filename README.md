@@ -16,7 +16,7 @@ You can install the development version of cuttingshapes from
 [github](https://github.com/annafergusson/cuttingshapes) with:
 
 ``` r
-devtools::install_github("annafergusson/cuttingshapes")
+devtools:install_github("annafergusson/cuttingshapes")
 ```
 
 ## Example
