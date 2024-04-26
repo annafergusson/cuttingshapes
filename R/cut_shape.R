@@ -22,7 +22,7 @@ utils::globalVariables(c(".","width","height"))
 #'
 #' @examples
 #' cut_shape(image = "https://cdn.pixabay.com/photo/2019/09/08/19/01/pumpkin-4461665_1280.jpg",
-#' shape = "https://imageog.flaticon.com/icons/png/512/30/30209.png?size=1200x630f&pad=10,10,10,10&ext=png&bg=FFFFFFFF")
+#' shape = "https://cdn.pixabay.com/photo/2016/02/07/19/44/cat-1185453_960_720.png")
 
 cut_shape <- function(image, shape, color = "#000000", fuzz = 10){
   # read the images if they are not already
@@ -35,7 +35,9 @@ cut_shape <- function(image, shape, color = "#000000", fuzz = 10){
   }
 
   # make the specified color transparent
+  # add white background in case shape image has transparent background
   shape %>%
+    magick::image_background(color = "#FFFFFF") %>%
     magick::image_transparent(color = color, fuzz = fuzz) -> shape
   shape_width <- shape %>% magick::image_info() %>% dplyr::pull(width)
   shape_height <- shape %>% magick::image_info() %>% dplyr::pull(height)

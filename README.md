@@ -4,7 +4,6 @@
 # cuttingshapes
 
 <!-- badges: start -->
-
 <!-- badges: end -->
 
 The goal of cuttingshapes is to make it easier to cut shapes out of
@@ -16,28 +15,27 @@ You can install the development version of cuttingshapes from
 [github](https://github.com/annafergusson/cuttingshapes) with:
 
 ``` r
-devtools::install_github("annafergusson/cuttingshapes")
+devtools:install_github("annafergusson/cuttingshapes")
 ```
 
 ## Example
 
 This is a quick example of cutting a cat shape out of an image of
-pumpkins. Because it’s Halloween\!
+pumpkins. Because it’s Halloween!
 
 ``` r
 library(cuttingshapes)
 cut_shape(image = "https://cdn.pixabay.com/photo/2019/09/08/19/01/pumpkin-4461665_1280.jpg",
-          shape = "https://imageog.flaticon.com/icons/png/512/30/30209.png?size=1200x630f&pad=10,10,10,10&ext=png&bg=FFFFFFFF")
+          shape = "https://cdn.pixabay.com/photo/2016/02/07/19/44/cat-1185453_960_720.png")
 ```
 
 <img src="man/figures/README-example1-1.png" width="100%" /> If you want
 to make the edges smoother, increase the fuzz factor from the default
-(but not too
-much\!).
+(but not too much!).
 
 ``` r
 cut_shape(image = "https://cdn.pixabay.com/photo/2019/09/08/19/01/pumpkin-4461665_1280.jpg",
-          shape = "https://imageog.flaticon.com/icons/png/512/30/30209.png?size=1200x630f&pad=10,10,10,10&ext=png&bg=FFFFFFFF",
+          shape = "https://cdn.pixabay.com/photo/2016/02/07/19/44/cat-1185453_960_720.png",
           fuzz = 60)
 ```
 
@@ -48,7 +46,7 @@ image you want to use as the shape is not black and white?
 
 First reduce the image down to two colours, then convert to black and
 white. Oh yeah, you can also supply an image-magick external pointer
-object as an argument\!
+object as an argument!
 
 ``` r
 library(magick)
@@ -61,8 +59,8 @@ cut_shape(image = pumpkins,
 
 <img src="man/figures/README-example3-1.png" width="100%" />
 
-You can also create some text to cut out of the pumpkins\! Just make
-sure the background color is set when you create a blank image.
+You can also create some text to cut out of the pumpkins! Just make sure
+the background color is set when you create a blank image.
 
 ``` r
 word <- image_blank(width = 800, 
@@ -80,7 +78,7 @@ cut_shape(image = pumpkins,
 
 <img src="man/figures/README-example4-1.png" width="100%" />
 
-Or make a hexagon shape cutter\!
+Or make a hexagon shape cutter!
 
 ``` r
 radius <- 200
@@ -127,6 +125,6 @@ cut_shape(image = pumpkins,
 <img src="man/figures/README-example6-1.png" width="100%" />
 
 And we can use the animation features of `magick` to do even more scary
-stuff\!
+stuff!
 
 ![](scary.gif)

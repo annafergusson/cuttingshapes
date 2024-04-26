@@ -37,13 +37,13 @@ This is a quick example of cutting a cat shape out of an image of pumpkins. Beca
 ```{r example1}
 library(cuttingshapes)
 cut_shape(image = "https://cdn.pixabay.com/photo/2019/09/08/19/01/pumpkin-4461665_1280.jpg",
-          shape = "https://imageog.flaticon.com/icons/png/512/30/30209.png?size=1200x630f&pad=10,10,10,10&ext=png&bg=FFFFFFFF")
+          shape = "https://cdn.pixabay.com/photo/2016/02/07/19/44/cat-1185453_960_720.png")
 ```
 If you want to make the edges smoother, increase the fuzz factor from the default (but not too much!).
 
 ```{r example2}
 cut_shape(image = "https://cdn.pixabay.com/photo/2019/09/08/19/01/pumpkin-4461665_1280.jpg",
-          shape = "https://imageog.flaticon.com/icons/png/512/30/30209.png?size=1200x630f&pad=10,10,10,10&ext=png&bg=FFFFFFFF",
+          shape = "https://cdn.pixabay.com/photo/2016/02/07/19/44/cat-1185453_960_720.png",
           fuzz = 60)
 ```
 
